@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-automation-server-client = { git = "https://github.com/odense-rpa/automation-server-client.git", tag = "v0.2.0" }
+automation-server-client = { git = "https://github.com/odense-rpa/automation-server-client.git", tag = "v0.2.1" }

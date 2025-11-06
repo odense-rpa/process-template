@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 
-from automation_server_client import AutomationServer, Workqueue, WorkItemError, Credential
+from automation_server_client import AutomationServer, Workqueue, WorkItemError, Credential, WorkItemStatus
 
 
 async def populate_queue(workqueue: Workqueue):
@@ -31,14 +31,13 @@ async def process_workqueue(workqueue: Workqueue):
 
 if __name__ == "__main__":
     ats = AutomationServer.from_environment()
-
     workqueue = ats.workqueue()
 
     # Initialize external systems for automation here..
 
     # Queue management
     if "--queue" in sys.argv:
-        workqueue.clear_workqueue("new")
+        workqueue.clear_workqueue(WorkItemStatus.NEW)
         asyncio.run(populate_queue(workqueue))
         exit(0)
 

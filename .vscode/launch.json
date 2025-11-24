@@ -10,6 +10,7 @@
             "request": "launch",
             "program": "main.py",
             "console": "integratedTerminal",
+            "justMyCode": false,
             "args": [
             ]
         },
@@ -19,6 +20,7 @@
             "request": "launch",
             "program": "main.py",
             "console": "integratedTerminal",
+            "justMyCode": false,
             "args": [
                 "--queue"
             ]

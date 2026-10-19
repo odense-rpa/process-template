@@ -2,5 +2,6 @@
 .env
 input/
 __pycache__/
+*.py[cod]
 output/
 certifikater/

@@ -1,2 +1,6 @@
 .venv
 .env
+input/
+__pycache__/
+output/
+certifikater/

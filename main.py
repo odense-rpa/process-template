@@ -25,7 +25,8 @@ async def process_workqueue(workqueue: Workqueue):
                 pass
             except WorkItemError as e:
                 # A WorkItemError represents a soft error that indicates the item should be passed to manual processing or a business logic fault
-                logger.error(f"Error processing item: {data}. Error: {e}")
+                # str(item) is id and reference only; never log item.data, it can hold personal data
+                logger.error("Error processing %s: %s", item, e)
                 item.fail(str(e))
 
 
